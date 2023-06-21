@@ -1,0 +1,4 @@
+Numbers: 0676890890, calls: 10
+Numbers: 0985486732, calls: 5
+Numbers: 0632456789, calls: 33
+Amount of calls: 48
