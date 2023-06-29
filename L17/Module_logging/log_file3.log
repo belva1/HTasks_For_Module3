@@ -1,0 +1,15 @@
+2023-06-27 23:31:44,719 INFO The values of x and y are 2 and 5.
+2023-06-27 23:31:44,719 INFO x/y successful with result: 0.4.
+2023-06-27 23:31:44,720 INFO The values of x and y are 3 and 7.
+2023-06-27 23:31:44,720 INFO x/y successful with result: 0.42857142857142855.
+2023-06-27 23:31:44,720 INFO The values of x and y are 6 and 12.
+2023-06-27 23:31:44,720 INFO x/y successful with result: 0.5.
+2023-06-27 23:31:44,720 INFO The values of x and y are 4 and 0.
+2023-06-27 23:31:44,720 ERROR ZeroDivisionError
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\a-level\GIT5\L18\LOG_Practice\file3.py", line 13, in <module>
+    a = x/y
+        ~^~
+ZeroDivisionError: division by zero
+2023-06-27 23:31:44,730 INFO The values of x and y are 10 and 1.
+2023-06-27 23:31:44,730 INFO x/y successful with result: 10.0.
