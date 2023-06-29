@@ -1,0 +1,7 @@
+2023-06-27 23:29:13,312 INFO The values of x and y are 3 and 0.
+2023-06-27 23:29:13,312 ERROR ZeroDivisionError
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\a-level\GIT5\L18\LOG_Practice\file2.py", line 11, in <module>
+    x/y
+    ~^~
+ZeroDivisionError: division by zero
