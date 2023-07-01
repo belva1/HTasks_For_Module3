@@ -1,0 +1,15 @@
+2023-07-01 20:00:38,028 ERROR brittney36@ccategoryk.com - this email is already in use.
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\a-level\GIT5\L19\test_L17\classes\employee_recruiter_developer.py", line 33, in validate
+    raise EmailAlreadyExistsException(f"{email} - this email is already in use.")
+EmailAlreadyExistsException: brittney36@ccategoryk.com - this email is already in use.
+2023-07-01 20:00:38,071 ERROR brittney36@ccategoryk.com - this email is already in use.
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\a-level\GIT5\L19\test_L17\classes\employee_recruiter_developer.py", line 33, in validate
+    raise EmailAlreadyExistsException(f"{email} - this email is already in use.")
+EmailAlreadyExistsException: brittney36@ccategoryk.com - this email is already in use.
+2023-07-01 20:00:38,073 ERROR brittney36@ccategoryk.com - this email is already in use.
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\a-level\GIT5\L19\test_L17\classes\employee_recruiter_developer.py", line 33, in validate
+    raise EmailAlreadyExistsException(f"{email} - this email is already in use.")
+EmailAlreadyExistsException: brittney36@ccategoryk.com - this email is already in use.
