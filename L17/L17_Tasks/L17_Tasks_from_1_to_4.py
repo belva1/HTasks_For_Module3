@@ -18,7 +18,9 @@ class EmailAlreadyExistsException(Exception):
 class SaveEmail:
     def __init__(self, file_info):
         self.file_info = file_info
-        with open(file_info, 'w', newline='') as file:
+
+    def save_header(self):
+        with open(self.file_info, 'w', newline='') as file:
             writer = csv.writer(file, lineterminator="\r")
             writer.writerow(["Name", "Salary", "Email"])  # will be written only once when created.
 
@@ -32,7 +34,7 @@ class SaveEmail:
                 except EmailAlreadyExistsException:
                     logging.exception(f"{email} - this email is already in use.")
             # якщо у вас будуть advices щодо переробки процесу логування, будь ласка, підкажіть.
-            # я розумію, що не дуже логічно перехоплювати raise :с
+            # я розумію, що не дуже логічно перехоплювати raise :сccc
 
     def save(self, emp):
         with open(self.file_info, 'a', newline='') as file:
@@ -45,13 +47,13 @@ class SaveEmail:
 
 
 class Employee:
-    def __init__(self, name, salary_for_one_working_day, email, save_email: SaveEmail):
+    def __init__(self, name, salary_for_one_working_day, email):
         self.name = name
         self.salary_for_one_working_day = salary_for_one_working_day
-        self.save_email = save_email
-        self.save_email.validate(email)
         self.email = email
-        self.save_email.save(self)
+        save_email = SaveEmail('file_info.csv')
+        save_email.validate(email)
+        save_email.save(self)
 
     def __str__(self):
         return f"Employee: {self.name}, Salary: {self.check_salary()}"
@@ -93,8 +95,8 @@ class Recruiter(Employee):
 
 
 class Developer(Employee):
-    def __init__(self, name, salary_for_one_working_day, email, save_email, tech_stack: list):
-        super().__init__(name, salary_for_one_working_day, email, save_email)
+    def __init__(self, name, salary_for_one_working_day, email, tech_stack):
+        super().__init__(name, salary_for_one_working_day, email)
         self.tech_stack = tech_stack
 
     def __str__(self):
@@ -126,17 +128,18 @@ def added_devs(dev1: Developer, dev2: Developer) -> Developer:
     else:
         new_salary = dev2.salary_for_one_working_day
     new_tech_list = list(set(dev1.tech_stack).union(set(dev2.tech_stack)))
-    new_dev: Developer = Developer(new_name, new_salary, new_tech_list)
+    new_dev: Developer = Developer(new_name, new_salary, '', new_tech_list)
     return new_dev
 
 
-save_email = SaveEmail("file_info.csv")
+save_email_pp = SaveEmail("file_info.csv")
+save_email_pp.save_header()
 
-emp1 = Employee('Valeriya Belyayeva', 20, '848belval848@gmail.com', save_email)
+emp1 = Employee('Valeriya Belyayeva', 20, '848belval848@gmail.com')
 dev1_name_of_technology = ['Python', 'C#']
-dev1 = Developer('Sua Like', 50, 'sualkeee200@soccerjh.com', save_email, dev1_name_of_technology)
-rec1 = Recruiter('Lili Lula', 25, 'bholu1@psmscientific.com', save_email)
-emp2 = Employee('Init Turbo', 20, 'gtyrbyf88@forward4families.org', save_email)
-emp3 = Employee('Brittney Skil', 20, 'brittney36@ccategoryk.com', save_email)
-emp4 = Employee('Brittney Well', 20, 'brittney36@ccategoryk.com', save_email)
-emp5 = Employee('Brittney Sell', 20, 'brittney36@ccategoryk.com', save_email)
+dev1 = Developer('Sua Like', 50, 'sualkeee200@soccerjh.com', dev1_name_of_technology)
+rec1 = Recruiter('Lili Lula', 25, 'bholu1@psmscientific.com')
+emp2 = Employee('Init Turbo', 20, 'gtyrbyf88@forward4families.org', )
+emp3 = Employee('Brittney Skil', 20, 'brittney36@ccategoryk.com')
+emp4 = Employee('Brittney Well', 20, 'brittney36@ccategoryk.com')
+emp5 = Employee('Brittney Sell', 20, 'brittney36@ccategoryk.com')

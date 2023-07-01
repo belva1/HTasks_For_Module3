@@ -1,15 +1,15 @@
-2023-06-28 01:17:30,752 ERROR brittney36@ccategoryk.com - this email is already in use.
+2023-07-01 19:55:23,458 ERROR brittney36@ccategoryk.com - this email is already in use.
 Traceback (most recent call last):
-  File "C:\Users\HP\Documents\a-level\GIT5\L17\L17_Tasks\L17_Tasks_from_1_to_4.py", line 31, in validate
+  File "C:\Users\HP\Documents\a-level\GIT5\L17\L17_Tasks\L17_Tasks_from_1_to_4.py", line 33, in validate
     raise EmailAlreadyExistsException(f"{email} - this email is already in use.")
 EmailAlreadyExistsException: brittney36@ccategoryk.com - this email is already in use.
-2023-06-28 01:17:30,768 ERROR brittney36@ccategoryk.com - this email is already in use.
+2023-07-01 19:55:23,483 ERROR brittney36@ccategoryk.com - this email is already in use.
 Traceback (most recent call last):
-  File "C:\Users\HP\Documents\a-level\GIT5\L17\L17_Tasks\L17_Tasks_from_1_to_4.py", line 31, in validate
+  File "C:\Users\HP\Documents\a-level\GIT5\L17\L17_Tasks\L17_Tasks_from_1_to_4.py", line 33, in validate
     raise EmailAlreadyExistsException(f"{email} - this email is already in use.")
 EmailAlreadyExistsException: brittney36@ccategoryk.com - this email is already in use.
-2023-06-28 01:17:30,769 ERROR brittney36@ccategoryk.com - this email is already in use.
+2023-07-01 19:55:23,485 ERROR brittney36@ccategoryk.com - this email is already in use.
 Traceback (most recent call last):
-  File "C:\Users\HP\Documents\a-level\GIT5\L17\L17_Tasks\L17_Tasks_from_1_to_4.py", line 31, in validate
+  File "C:\Users\HP\Documents\a-level\GIT5\L17\L17_Tasks\L17_Tasks_from_1_to_4.py", line 33, in validate
     raise EmailAlreadyExistsException(f"{email} - this email is already in use.")
 EmailAlreadyExistsException: brittney36@ccategoryk.com - this email is already in use.
